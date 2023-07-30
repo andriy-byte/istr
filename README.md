@@ -54,8 +54,8 @@ int main() {
 
     std::cout << "Pattern: " << some1.get_pattern() << std::endl;
     std::cout << "Substitution: " << some1.substitution() << std::endl;
-    
-    
+
+
     istr::string_interpolation<std::string> custom("Hello, {{name}}!");
     custom.put_pattern_arguments({{"{{name}}", "John"}});
 
@@ -63,10 +63,10 @@ int main() {
     std::cout << "Substitution: " << custom.substitution() << std::endl;
 
     // Reset the object to its initial state
-    custom_delimiters.reset();
+    custom.reset();
 
-    std::cout << "Pattern after reset: " << custom_delimiters.get_pattern() << std::endl;
-    std::cout << "Substitution after reset: " << custom_delimiters.substitution() << std::endl;
+    std::cout << "Pattern after reset: " << custom.get_pattern() << std::endl;
+    std::cout << "Substitution after reset: " << custom.substitution() << std::endl;
 
 
     istr::string_interpolation<std::string> custom_delimiters("The value of {{{some}}} is {value}.");
