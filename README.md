@@ -13,6 +13,27 @@ ISTR (Interpolation String Template Replace) is a lightweight C++ library that p
 
 To use the ISTR library, include the `istr.hpp` header file in your C++ project. The library provides a `string_interpolation` class template that you can use for string interpolation.
 
+## Building the Library
+To build the iStr library, you can use CMake. Here's how you can build it in a separate directory:
+
+```
+mkdir build
+cd build
+cmake -S path/to/istr -B .
+make
+```
+The compiled library will be available in the build/lib directory.
+
+## Building the Examples
+If you want to build and run the examples provided with the library, you can use the following CMake command:
+
+```
+cmake -B ./build -S . -DBUILD_EXAMPLES=ON
+cd build
+make
+```
+The compiled examples will be available in the ```build/examples``` directory.
+
 ### Basic Usage
 
 ```cpp
